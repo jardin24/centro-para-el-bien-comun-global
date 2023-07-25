@@ -1,0 +1,703 @@
+        
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        body {
+             font-family: 'Roboto Serif', 'Playfair Display', serif;
+             margin: 0;
+             padding: 0;
+             width: 100%;
+             overflow-x: hidden;
+        }
+
+
+                
+
+        .upper-header {
+             height: 60px;
+             background-color: rgb(21, 55, 90);
+             color: white;
+             display: flex;
+             justify-content: space-between;
+             position: fixed;
+             top: 0;
+             left: 0;
+             right: 0;
+             z-index: 100;
+        }
+
+
+        .left-section {
+             align-items: center;
+             display: flex;
+             margin-left: 0px;
+                
+        }
+
+                
+
+         .titulo-1 { 
+             margin-top: 0px;
+             font-size: 22px;
+             font-family: 'Roboto Serif', 'Playfair Display', serif;
+             margin-left: 8px;
+        }
+
+        .titulo-1 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        
+
+
+
+        .logo {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin-left: 10px;
+        }
+
+
+        .logo > img {
+             height: 27px;
+             margin-right: auto;
+             margin-left: 5px;
+             border-radius: 12px;
+
+        }
+
+        .right-section {
+            align-items: center;
+            flex-direction: row;
+            display: flex;
+            margin-right: 20px;
+            justify-content: flex-end;
+            width: 30%;
+            height: 40px;
+            margin-top: 11px;
+        }
+
+            
+        .social-media-icons {
+             display: flex;
+             justify-content: space-between;
+             width: 120px;
+             margin-right: 16px;
+        }
+
+        
+
+        .social-media-icons a {
+             color: white; /* This will make your icons white */
+        }
+
+             
+        
+        .social-media-icons i {
+             font-size: 24px; /* Adjust size as needed */
+        }
+
+
+        .Search-bar {
+             flex: 1;
+             height: 30px; /* increased height */
+             font-size: 16px;
+             border: 1px solid white; /* simplified border declaration */
+             border-radius: 2px;
+             margin-right: 22px;
+             padding: 5px; /* padding inside the search bar for better appearance */
+             background-color: rgb(21, 55, 90);
+             color: white;
+             border-width: 1px;
+             width: 20%;
+
+        }
+
+
+
+        .Search-bar:focus {
+             border: 1px solid white !important;
+             outline: none !important;
+             box-shadow: none !important;
+        }
+
+
+    
+
+        .Search-bar::placeholder {
+              font-family: 'Roboto Serif', 'Playfair Display', serif;
+              font-size: 18px;
+              background-color: rgb(21, 55, 90);
+              color: white;
+        }
+
+
+        .search-button {
+              display: flex;
+              height: 30px; /* increased height */
+              width: 30px; /* increased width */
+              background-color: rgb(21, 55, 90);
+              border: 1px solid white; /* simplified border declaration */
+              margin-right: 8px;
+              align-items: center;
+              justify-content: center;
+              border-color: rgb(21, 55, 90);
+              outline: none !important;
+              box-shadow: none !important;
+                
+         }
+
+        .Icon {
+              height: 30px;
+              color: white;
+        }
+
+
+                .lower-header {
+                    background-color: white;
+                    color: black;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: center;
+                    position: fixed;
+                    width: 100%;
+                    top: 60px;
+                    box-shadow: 0px -1px 10px rgba(0,0,0,0.2);
+                    z-index: 999;
+                    height: 70px;
+                }
+
+
+
+                .lower-header a {
+                    margin-right: 30px;
+                    color: black;
+                    font-family: 'Roboto Serif', 'Playfair Display', serif;
+                    font-size: 20px;
+                    text-decoration: none;
+                    position: relative;
+                    overflow: hidden; 
+                    transition: color 0.2s ease-in-out; /* add this for smooth transition */
+                }
+
+                .lower-header a:last-child {
+                    margin-right: 0;
+                }
+
+                .lower-header a:hover {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+
+            
+
+
+
+                
+                .Momentarely Out lower-header a::before { 
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 1.5px;
+                    background-color: black; /* you had it as white, so it wasn't visible on a white background */
+                    transition: width 0.5s ease-in-out;
+                    
+                }
+                .lower-header a:hover::before {
+                    width: 100%;
+                }
+
+
+                
+
+
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                    
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    min-width: 160px;
+                    z-index: 1;
+                    background-color: rgb(21, 55, 90); /* Add the specific blue color */
+                    width: 330px;
+                }
+
+                .dropdown-content a {
+                    color: white;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    font-size: 18px;
+                }
+
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+        
+        
+                .dropdown-content a:hover {
+                    color: rgba(255, 255, 255, 0.5);
+                }
+        
+
+
+                
+
+                .carousel-inner img {
+                    min-height: calc(100vh - 130px); /* Adjust as necessary */
+                }
+
+                .carousel-inner {
+                    position: sticky;
+                    top: 130px; /* Adjust based on the total height of your headers */
+                }
+
+                .slider-item {
+                    position: relative; /* This makes it a position context for absolute positioning */
+                    /* existing styles... */
+                }
+
+                .slider-title, .slider-title-1, .slider-title-2 {
+                    position: absolute; 
+                    left: 150px; 
+                    color: white; 
+                    padding: 10px; 
+                    font-family: 'Roboto Serif', 'Playfair Display', serif;
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+                
+                .slider-title {
+                    bottom: 280px; 
+                }
+                
+                .slider-title-1 {
+                    bottom: 220px; 
+                }
+                
+                .slider-title-2 {
+                    bottom: 160px;
+                    
+                }
+                
+                .slider-title h3 {
+                    font-size: 48px;
+                    margin: 0;
+                    font-weight: 700; 
+                }
+
+                
+                .slider-title-1 h3 {
+                    font-size: 27px;
+                    margin: 0;
+                    font-weight: 700; 
+                }
+                
+                .slider-title-2 h3 {
+                    font-size: 27px;
+                    margin: 0;
+                    font-weight: 700; 
+                }
+                
+
+
+        
+        .quienes-somos-inicio {
+        width: 100%;
+        height: 700px;
+        margin-top: 60px; /* Adjust this as per your needs */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        }
+
+
+        .quienes-somos-titulo {
+        position: absolute;
+        text-align: center;
+        font-size: 45px;
+        font-weight: 900;
+        
+        }
+
+
+        .quienes-somos-texto {
+            position: absolute;
+            text-align: center;
+            font-size: 24px;
+            margin-right: 30px;
+            margin-left: 50px;
+            margin-top: 130px;
+
+        }
+
+
+        .el-director {
+            width: 100%;
+            height: 300px;
+            margin-top: 380px; /* Adjust this as per your needs */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 10%;
+            margin-left: 34%;
+            
+        }
+        
+        .image-container {
+                    position: relative;
+                    overflow: hidden;
+                    height: 100%;  /* adjust this to your liking */
+                    width: 100%;  /* adjust this to your liking */
+                    max-width: 660px;  /* adjust this to your liking */
+                    max-height: 538px; 
+                    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px 0px;
+                    
+                }
+
+                .image-container img {
+                    width: 100%;
+                    height: auto;
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                .image-container img:hover {
+                    transform: scale(1.2);
+                }
+        
+
+
+        .fotografia-director img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain;
+            box-shadow: 0px -1px 10px rgba(0,0,0,0.2);
+        
+        }
+
+        .cita-director {
+            margin-right: 300px;
+            margin-left: 90px;
+            font-size: 24px;
+        }
+
+
+
+
+
+
+
+
+
+        
+
+        .investigacion {
+            width: 100%;
+            height: auto;
+            background-color: rgb(246, 244, 244);
+           
+        }
+
+
+        .inicio {
+            width: 100%;
+            height: auto;
+            margin-top: 50px; /* Adjust this as per your needs */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+
+    
+        .titulo { 
+        position: absolute;
+        text-align: center;
+        font-size: 45px;
+        font-weight: 900;
+        margin-top: 50px;
+
+        }
+
+
+        .presentacion {
+        position: absolute;
+        text-align: center;
+        font-size: 24px;
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-top: 160px;
+        } 
+
+
+       
+
+
+        
+
+        .institucion {
+            width: 93%;
+            height: auto;
+            background-color: rgb(246, 244, 244);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 300px;  
+            margin-right:auto;
+            margin-left:70px;
+        }   
+
+
+        .institucion-1 {
+            width: 93%;
+            height: auto;
+            background-color: rgb(246, 244, 244);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 70px;  
+            margin-right:auto;
+            margin-left:70px;
+        }   
+
+       
+        .institucion-preview {
+            margin-bottom:25px;
+            margin-top:20px;
+            margin-right:40px;
+            
+            
+        }
+
+        .institucion-info-grid {
+            display: grid;
+            grid-template-columns: 7px 1fr;   
+            margin-top:25px;
+
+          }
+          
+
+
+        .profile-picture {
+            width: 100%;
+            height: auto;
+          }
+          
+
+          .institucion-title {
+            margin-top: 0px;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 15px;
+            color:black;
+            font-weight: bold;
+          }
+          
+           
+
+          .institucion-descripcion {
+            margin-bottom: 15px;
+            font-size: 17px;
+            color: black;
+          }
+          
+          .institucion-titulo-enlace {
+            font-size: 19px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top:46.5px;
+          }
+
+          .institucion-titulo-enlace-1 {
+            font-size: 19px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top:21px;
+          }
+
+
+          .institucion-titulo-enlace-2 {
+            font-size: 19px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top:112px;
+          }
+
+          .institucion-titulo-enlace-3 {
+            font-size: 19px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top:25px;
+          }
+
+          .institucion-titulo-enlace-4 {
+            font-size: 19px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top:45.8px;
+          }
+
+          .institucion-titulo-enlace-5 {
+            font-size: 19px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top:45.8px;
+          }
+
+          .institucion-titulo-enlace-6 {
+            font-size: 19px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top:20px;
+          }
+
+          .institucion-titulo-enlace-7 {
+            font-size: 19px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top:20px;
+          }
+
+          .institucion-titulo-enlace-8 {
+            font-size: 19px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top:20px;
+          }
+
+
+          .institucion-titulo-enlace a:hover {
+            text-decoration: underline;
+          }
+
+          .fas fa-angle-right {
+            color: blue;
+          }
+          
+          
+          .institucion-row {
+            margin-bottom: 12px;
+            position: relative;
+          }
+        
+          
+          
+          
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: start;
+            padding: 20px;
+            background-color: rgb(21, 55, 90);
+            border-style: solid;
+            width: 100%;
+            height: 200px;
+            position: relative;
+            bottom: 0px;
+            color: white;
+            font-size: 18px;
+            margin-top: 150px;
+        }
+
+
+       
+
+        .primera-columna,
+        .segunda-columna {
+            margin: 40px 20px;
+        }
+
+        .social-media-icons-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px 20px;
+            margin-top: 40px;
+        }
+
+        .logo-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left:10px;
+            margin-top:39px;
+       }
+
+
+       .logo-1 > img {
+            height: 27px;
+            margin-right: auto;
+            margin-left: 5px;
+            border-radius: 12px;
+
+       }
+
+       .acerca-de a, 
+       .condiciones-servicio a, 
+       .politica-privacidad a, 
+       .instagram a, 
+       .twitter a, 
+       .linkedin a,
+       .correo a {
+        color: white;
+        text-decoration: none;
+       }
+
+       .acerca-de a:hover, 
+       .condiciones-servicio a:hover, 
+       .politica-privacidad a:hover, 
+       .instagram a:hover, 
+       .twitter a:hover, 
+       .linkedin a:hover, 
+       .correo a:hover {
+         color: rgb(255,255,255,0.3);
+        }
