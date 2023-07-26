@@ -199,7 +199,21 @@
 
 
                 
-                
+                .Momentarely Out lower-header a::before { 
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 1.5px;
+                    background-color: black; /* you had it as white, so it wasn't visible on a white background */
+                    transition: width 0.5s ease-in-out;
+                    
+                }
+                .lower-header a:hover::before {
+                    width: 100%;
+                }
 
 
                 
@@ -382,40 +396,49 @@
 
 
 
+ 
+
+        
         .publicaciones-investigacion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(248, 248, 248);
-  margin-top: 300px;
-  height: 100px; /* Add this to give some height to your div, you can adjust as needed */
-}
-
-.button-ia {
-  height: 50px;
-  width: 300px;
-  background-color:rgb(228, 23, 23);
-  border-width: 1px;
-  border-style: solid;
-  border-color:rgb(228, 23, 23);
-  justify-content: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  margin-top:150px;
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            margin-top: 10px;
+            height: 20px; /* Add this to give some height to your div, you can adjust as needed */
+        }
+        
+        .button-ia {
+            height: 50px;
+            width: 300px;
+            background-color:rgb(228, 23, 23);
+            border-width: 1px;
+            border-style: solid;
+            border-color:rgb(228, 23, 23);
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top:150px;
+        
+            
+        }
+        
+        .button-ia:hover {
+            text-decoration: none;
+        }
+        
+        .publicaciones-button {
+        color:white;
+        font-size:28px;
+        font-weight: 700;
+        margin-top:5px;
+        margin-left: 50px;
+        }
+        
   
-}
 
-.button-ia:hover {
-  text-decoration: none;
-}
 
-.publicaciones-button {
- color:white;
- font-size:28px;
- font-weight: 700;
- margin-top:5px;
- margin-left: 50px;
-}
+
+
 
 
 
@@ -428,6 +451,7 @@
             width: 100%;
             height: auto;
             background-color: rgb(246, 244, 244);
+            margin-top:200px;
            
         }
 
@@ -465,6 +489,9 @@
 
 
        
+
+
+
 
 
         
